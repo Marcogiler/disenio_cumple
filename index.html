@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="theme-color" content="#4B3E7A" />
+  <title>Amelia ::: Mis 15 años :::</title>
+
+  <!-- Google Fonts (Forum + Nunito) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+
+  <!-- Librerías CSS externas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <style>
+    :root {
+      /* Tipografías */
+      --fuente-1: "Forum", serif;
+      --fuente-2: "Nunito", sans-serif;
+
+      /* Paleta colores */
+      --color-pallete-1: #B192CC;
+      --color-pallete-2: #4B3E7A;
+      --color-pallete-3: #663C70;
+      --color-pallete-4: #E4D6F0;
+      --color-pallete-5: #FFFFFF;
+      --color-pallete-6: #F6EFFD;
+
+      /* Generales */
+      --color-fondo-loader: var(--color-pallete-4);
+      --color-loader: var(--color-pallete-3);
+      --color-fondo-body: var(--color-pallete-6);
+      --color-sombra-container-body: var(--color-pallete-1);
+      --color-scroll-track: var(--color-pallete-1);
+      --color-scroll-thumb: var(--color-pallete-3);
+      --color-scroll-thumb-hover: var(--color-pallete-2);
+      --color-fondo-secciones-1: var(--color-pallete-5);
+      --color-fondo-secciones-2: var(--color-pallete-4);
+      --color-titulos: var(--color-pallete-2);
+      --color-subtitulos: var(--color-pallete-3);
+      --color-fondo-btns: var(--color-pallete-2);
+      --color-fondo-btns-hover: var(--color-pallete-3);
+      --color-txt-btns: var(--color-pallete-5);
+      --color-txt-btns-hover: var(--color-pallete-5);
+      --color-backdrop-modal: var(--color-pallete-4);
+      --color-titulo-modal: var(--color-pallete-2);
+      --color-fondo-col-modal: var(--color-pallete-5);
+      --color-iconos-modales: var(--color-pallete-3);
+      --color-textos-modales: var(--color-pallete-3);
+      --color-x-cierre-modales: var(--color-pallete-3);
+      --color-hover-x-cierre-modales: var(--color-pallete-2);
+      --color-label-forms: var(--color-pallete-3);
+      --color-bordes-inputs-forms: var(--color-pallete-2);
+      --color-placeholders-forms: var(--color-pallete-3);
+      --color-inputs-form: var(--color-pallete-3);
+      --color-input-focus: var(--color-pallete-1);
+      --color-titulo-form-enviado: var(--color-pallete-2);
+      --color-texto-form-enviado: var(--color-pallete-2);
+      --color-bordes-secciones: var(--color-pallete-1);
+      --color-bordes-marcos: var(--color-pallete-1);
+
+      /* Música */
+      --color-circulos-anim-reproductor: var(--color-pallete-2);
+      --color-nota-anim-reproductor: var(--color-pallete-5);
+
+      /* Portada */
+      --color-fecha-portada: var(--color-pallete-4);
+      --color-nombres-portada: var(--color-pallete-5);
+      --color-subtitulo-portada: var(--color-pallete-1);
+      --color-lineas-nombres-portada: var(--color-pallete-4);
+      --color-frase-portada: var(--color-pallete-4);
+      --color-filtro-portada: var(--color-pallete-2);
+      --opacidad-filtro-portada: 0.4;
+
+      /* Cuenta regresiva */
+      --color-titulo-cuenta-regresiva: var(--color-pallete-2);
+      --color-numeros-cuenta-regresiva: var(--color-pallete-3);
+      --color-texto-cuenta-regresiva: var(--color-pallete-2);
+      --color-anim-cta-regresiva: var(--color-pallete-3);
+      --color-divisores-cta-regresiva: var(--color-pallete-3);
+      --color-msjfinal-cta-regresiva: var(--color-pallete-2);
+
+      /* Eventos */
+      --color-fondo-col-evento: var(--color-pallete-5);
+      --color-anim-eventos: var(--color-pallete-1);
+      --color-titulos-eventos: var(--color-pallete-3);
+      --color-subtitulos-eventos: var(--color-pallete-1);
+      --color-textos-eventos: var(--color-pallete-3);
+
+      /* Galería */
+      --color-anim-galeria: var(--color-pallete-1);
+      --color-fondo-polaroid: var(--color-pallete-4);
+      --color-fondo-polaroid-centro: var(--color-pallete-3);
+      --color-bullet-galeria: var(--color-pallete-1);
+      --color-modal-galeria: var(--color-pallete-4);
+      --color-titulo-galeria: var(--color-pallete-3);
+      --color-subtitulo-galeria: var(--color-pallete-2);
+
+      /* Fiesta */
+      --color-fondo-item-fiesta: var(--color-pallete-5);
+      --color-titulos-cards: var(--color-pallete-3);
+      --color-txt-cards: var(--color-pallete-3);
+      --color-anim-cards: var(--color-pallete-1);
+
+      /* Regalos */
+      --color-anim-regalos: var(--color-pallete-1);
+      --color-titulo-regalos: var(--color-pallete-3);
+      --color-subtitulo-regalos: var(--color-pallete-2);
+
+      /* Instagram */
+      --color-anim-instagram: var(--color-pallete-1);
+      --color-link-instagram: var(--color-pallete-3);
+
+      /* Footer */
+      --color-nombres-footer: var(--color-pallete-2);
+      --color-subtitulo-footer: var(--color-pallete-3);
+      --color-lineas-nombres-footer: var(--color-pallete-2);
+      --color-links-footer: var(--color-pallete-3);
+      --color-links-footer-hover: var(--color-pallete-1);
+      --color-fondo-firma: var(--color-pallete-4);
+      --color-txt-firma: var(--color-pallete-3);
+
+      /* Pesos tipográficos */
+      --grosor-fuente-light: 300;
+      --grosor-fuente-regular: 400;
+      --grosor-fuente-semi-bold: 600;
+      --font-titulos: var(--fuente-1);
+      --grosor-titulos: var(--grosor-fuente-regular);
+      --font-subtitulos: var(--fuente-2);
+      --grosor-subtitulos: var(--grosor-fuente-light);
+      --font-nombres-portada: var(--fuente-1);
+      --grosor-nombres-portada: var(--grosor-fuente-regular);
+      --font-frase-portada: var(--fuente-2);
+      --grosor-frase-portada: var(--grosor-fuente-light);
+    }
+
+    /* Body & Container */
+    body { background-color: var(--color-fondo-body); }
+    .inv-container.container {
+      max-width: 1100px;
+      padding: 0;
+      box-shadow: 0px 0px 34px -4px var(--color-sombra-container-body);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: var(--color-scroll-track); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb { border-radius: 10px; background: var(--color-scroll-thumb); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-scroll-thumb-hover); }
+
+    /* Adornos florales (rutas locales) */
+    .bordes-adornos { position: relative; padding: 140px 0 130px !important; }
+    .bordes-adornos .container, .content-fotos { position: relative; z-index: 2; }
+    .bordes-adornos:before, .bordes-adornos:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 1;
+      background-repeat: repeat-x;
+      background-size: 300px;
+      pointer-events: none;
+    }
+    .bordes-adornos:before {
+      display: none;
+      top: 0;
+      background-position: left top;
+      background-image: url("img/divisor-top.png");
+    }
+    .bordes-adornos:after {
+      bottom: -85px;
+      background-position: left bottom;
+      background-image: url("img/divisor-bottom.png");
+    }
+    .portada-container.bordes-adornos:before { display: block; top: -65px; }
+    .footer-firma.bordes-adornos::after { display: none; }
+    .footer-firma.bordes-adornos { padding-top: 100px !important; padding-bottom: 20px !important; }
+
+    /* Sombras & Bordes */
+    .sombra-horizontal { height: 6px; width: 100%; position: absolute; left: 0; }
+    .sombra-top { box-shadow: 0px 5px 8px -2px #111; top: -6px; }
+    .sombra-bottom { box-shadow: 0px -5px 8px -2px #111; bottom: -6px; }
+    .section-border { border-bottom: 2px solid var(--color-bordes-secciones); border-top: 2px solid var(--color-bordes-secciones); }
+
+    /* Botones & Títulos */
+    .boton {
+      display: inline-block;
+      background: var(--color-fondo-btns);
+      color: var(--color-txt-btns);
+      font-family: var(--fuente-1);
+      font-weight: var(--grosor-fuente-regular);
+      border-radius: 10px;
+      line-height: 20px;
+      font-size: 20px;
+      padding: 15px 30px;
+      transition: all 0.5s ease;
+      min-width: 230px;
+      border: none;
+      cursor: pointer;
+    }
+    .boton:hover { background: var(--color-fondo-btns-hover); text-decoration: none; color: var(--color-txt-btns-hover); }
+    .title { width: 100%; display: inline-block; font-family: var(--font-titulos); color: var(--color-titulos); font-size: 45px; line-height: 45px; margin-bottom: 0; }
+    .subtitle { width: 100%; display: inline-block; font-family: var(--font-subtitulos); font-weight: var(--grosor-subtitulos); color: var(--color-subtitulos); font-size: 20px; }
+    ul { list-style: none; padding: 0; }
+
+    /* Loader */
+    .preloader-area { position: fixed; top: 0; left: 0; background: var(--color-fondo-loader); z-index: 11000; height: 100%; width: 100%; overflow: hidden; }
+    .preloader-area .loader { width: 80px; animation: pulseHeart 1.2s infinite ease-in-out; }
+    .preloader-area .loader path { fill: var(--color-loader); }
+    @keyframes pulseHeart { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+
+    /* Portada (ruta local) */
+    section.portada {
+      width: 100%;
+      height: 750px;
+      padding-bottom: 0;
+      position: relative;
+      overflow: hidden;
+      background-image: url("img/Gemini_Generated_Image_ctzpsxctzpsxctzp.jpg");
+      background-size: cover;
+      background-position: center 20%;
+    }
+    section.portada-completa .opacidad-portada {
+      position: absolute; width: 100%; height: 100%;
+      background-color: var(--color-filtro-portada); opacity: var(--opacidad-filtro-portada); z-index: 1;
+    }
+    section.portada-completa .portada-container { width: 100%; height: 100%; position: absolute; z-index: 10; }
+    section.portada .portada-container .content-portada { width: 100%; z-index: 9999; position: relative; }
+    section.portada .content-portada span.fecha { display: inline-block; font-family: var(--fuente-1); font-size: 27px; line-height: 35px; color: var(--color-fecha-portada); margin-bottom: 15px; }
+    section.portada .content-portada .nombres { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; margin: 0 auto; padding: 10px 0; }
+    section.portada .box-nombres-fecha-portada .nombres::before,
+    section.portada .box-nombres-fecha-portada .nombres::after { content: ""; position: absolute; width: 40%; height: 1px; background-color: var(--color-lineas-nombres-portada); z-index: 9; }
+    section.portada .box-nombres-fecha-portada .nombres::before { top: 0; }
+    section.portada .box-nombres-fecha-portada .nombres::after { bottom: 0; }
+    section.portada .content-portada .nombres span { color: var(--color-nombres-portada); font-size: 90px; line-height: 95px; font-family: var(--fuente-1); padding: 0 5px; }
+    section.portada p.subtitulo { font-family: var(--fuente-1); font-size: 40px; line-height: 40px; color: var(--color-subtitulo-portada); margin: 20px 0 0; }
+    section.portada .box-frase-portada { margin-top: 60px; }
+    section.portada .box-frase-portada p { font-family: var(--font-frase-portada); font-weight: var(--grosor-frase-portada); font-size: 22px; line-height: 27px; color: var(--color-frase-portada); display: inline-block; width: 70%; margin: 0 auto; }
+
+    /* Cuenta regresiva */
+    section.cuenta-regresiva { position: relative; background-color: var(--color-fondo-secciones-2); padding: 100px 0; }
+    section.cuenta-regresiva span.falta { font-family: var(--fuente-1); font-size: 60px; color: var(--color-titulo-cuenta-regresiva); }
+    section.cuenta-regresiva .reloj { margin-top: 10px; margin-bottom: 25px; }
+    section.cuenta-regresiva .reloj-col { width: 110px; border-right: 1px solid var(--color-divisores-cta-regresiva); padding: 0 8px; float: left; }
+    section.cuenta-regresiva .reloj-col.no-border { border: none; }
+    section.cuenta-regresiva .reloj-col span.number { display: inline-block; width: 100%; color: var(--color-numeros-cuenta-regresiva); font-family: var(--fuente-1); font-size: 55px; line-height: 50px; }
+    section.cuenta-regresiva .reloj-col span.time { display: inline-block; width: 100%; color: var(--color-texto-cuenta-regresiva); font-family: var(--fuente-1); font-size: 25px; margin-top: 5px; }
+    section.cuenta-regresiva .corazon-falta { width: 38px; height: 32px; animation: pulseHeart 1.4s infinite ease-in-out; }
+    section.cuenta-regresiva .corazon-falta path { fill: var(--color-anim-cta-regresiva); }
+
+    /* Eventos */
+    section.ceremonia-fiesta { padding: 100px 0; position: relative; background-color: var(--color-fondo-secciones-2); }
+    section.ceremonia-fiesta .box-color-col { width: 80%; background-color: var(--color-fondo-col-evento); border-radius: 20px; padding: 35px 0; border: 1px solid var(--color-bordes-marcos); }
+    section.ceremonia-fiesta .anim-fiesta { width: 150px; margin: 20px auto 0; padding: 10px 20px; }
+    section.ceremonia-fiesta .col-fiesta h3 { font-family: var(--fuente-1); color: var(--color-titulos-eventos); font-size: 45px; margin-top: 10px; }
+    section.ceremonia-fiesta .info-col { margin-top: 35px; }
+    section.ceremonia-fiesta .info-col .info-box { margin-bottom: 40px; }
+    section.ceremonia-fiesta .info-col .info-box h6 { font-family: var(--fuente-1); color: var(--color-subtitulos-eventos); font-size: 32px; }
+    section.ceremonia-fiesta .info-col .info-box p { font-family: var(--fuente-2); font-weight: var(--grosor-fuente-light); color: var(--color-textos-eventos); font-size: 18px; padding: 0 20px; margin-bottom: 10px; }
+    section.ceremonia-fiesta .anim-fiesta path { stroke: var(--color-anim-eventos); stroke-width: 2px; }
+
+    /* Confirmación */
+    section.seccion-principal.confirmacion-asistencia { padding: 25px 0 125px; text-align: center; background-color: var(--color-fondo-secciones-2); border-bottom: 2px solid var(--color-bordes-secciones); }
+    section.seccion-principal.confirmacion-asistencia .box-confirmacion { position: relative; z-index: 2; }
+    section.seccion-principal.confirmacion-asistencia .subtitle { margin: 12px 0 24px; }
+
+    /* Galería */
+    .fancybox-bg { background-color: var(--color-modal-galeria) !important; }
+    section.galeria { padding: 100px 0; position: relative; background-color: var(--color-fondo-secciones-1); }
+    section.galeria .title { color: var(--color-titulo-galeria); }
+    section.galeria .subtitle { color: var(--color-subtitulo-galeria); }
+    section.galeria .anim-galeria { width: 70px; margin: 0 auto; }
+    section.galeria .content-fotos { position: relative; margin: 30px auto 60px; }
+    section.galeria .content-fotos img { width: 100%; }
+    section.galeria .content-fotos .polaroid { padding: 15px 15px 100px; margin: 5px; background-color: var(--color-fondo-polaroid); box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.4); transition: all 0.5s ease; }
+    section.galeria .slick-center .polaroid { background-color: var(--color-fondo-polaroid-centro) !important; }
+    .slick-dots { bottom: -30px; }
+    section.galeria .slick-dots li button:before { font-size: 45px !important; color: var(--color-bullet-galeria) !important; opacity: 0.6; }
+    section.galeria .slick-dots li.slick-active button:before { opacity: 1; }
+    section.galeria .anim-galeria path { stroke: var(--color-anim-galeria); stroke-width: 2px; }
+
+    /* Fiesta */
+    section.fiesta { background-color: var(--color-fondo-secciones-2); padding: 100px 0; position: relative; }
+    section.fiesta .container { z-index: 999; position: relative; }
+    section.fiesta .anim-musica { width: 75px; margin: 15px auto 40px; }
+    section.fiesta .anim-vestuario { width: 95px; }
+    section.fiesta .anim-tips { width: 55px; }
+    section.fiesta .item-fiesta { margin-top: 60px; padding: 0 20px; position: relative; z-index: 2; }
+    section.fiesta .item-fiesta h3 { color: var(--color-titulos-cards); font-family: var(--fuente-1); font-size: 30px; }
+    section.fiesta .item-fiesta p { color: var(--color-txt-cards); margin-bottom: 0; font-family: var(--fuente-2); font-weight: var(--grosor-fuente-light); font-size: 17px; }
+    section.fiesta .item-fiesta .content-item-fiesta { padding: 30px; background-color: var(--color-fondo-col-modal); border-radius: 20px; border: 1px solid var(--color-bordes-marcos); }
+    section.fiesta .box-color-col { margin: 0 auto; min-height: 385px; padding: 30px 10px; background-color: var(--color-fondo-item-fiesta); border-radius: 20px; }
+    section.fiesta .content-anim-fiesta { height: 80px; }
+    section.fiesta .anim-musica path, section.fiesta .anim-vestuario path, section.fiesta .anim-tips path { stroke: var(--color-anim-cards); stroke-width: 2px; }
+
+    /* Regalos & Instagram */
+    section.regalos { padding: 100px 0; position: relative; background-color: var(--color-fondo-secciones-1); }
+    section.regalos .title { color: var(--color-titulo-regalos); }
+    section.regalos .subtitle { color: var(--color-subtitulo-regalos); }
+    section.regalos .anim-regalos { width: 70px; margin: 1px auto 10px; }
+    section.regalos .anim-regalos path { stroke: var(--color-anim-regalos); stroke-width: 2px; }
+
+    section.instagram { padding: 100px 0; position: relative; background-color: var(--color-fondo-secciones-2); }
+    section.instagram .container { position: relative; z-index: 999; }
+    section.instagram .hashtag { color: var(--color-link-instagram); font-size: 50px; font-family: var(--fuente-1); display: inline-block; margin-bottom: 10px; padding: 15px; }
+    section.instagram .anim-instagram { width: 60px; margin: 0 auto 15px; }
+    section.instagram .anim-instagram path { stroke: var(--color-anim-instagram); stroke-width: 2px; fill: var(--color-anim-instagram); }
+
+    /* Footer & Firma */
+    section.footer { position: relative; padding: 100px 0; background-color: var(--color-fondo-secciones-1); }
+    section.footer .col-nombres-footer .nombres { position: relative; display: flex; align-items: center; justify-content: center; padding: 15px 0 10px; }
+    section.footer .col-nombres-footer .nombres::before,
+    section.footer .col-nombres-footer .nombres::after { content: ""; position: absolute; width: 65%; height: 1px; background-color: var(--color-lineas-nombres-footer); }
+    section.footer .col-nombres-footer .nombres::before { top: 0; }
+    section.footer .col-nombres-footer .nombres::after { bottom: 0; }
+    section.footer .col-nombres-footer .nombres span { color: var(--color-nombres-footer); font-size: 55px; line-height: 60px; font-family: var(--fuente-1); }
+    section.footer p.subtitulo { font-family: var(--fuente-1); font-size: 25px; color: var(--color-subtitulo-footer); margin-top: 10px; text-align: center; }
+    section.footer .col-acciones-footer ul li { margin-bottom: 20px; text-align: right; line-height: 20px; }
+    section.footer .col-acciones-footer ul a { color: var(--color-links-footer); font-family: var(--fuente-1); font-size: 22px; }
+    section.footer .col-acciones-footer ul a:hover { color: var(--color-links-footer-hover); text-decoration: none; }
+
+    footer { background-color: var(--color-fondo-firma); font-family: var(--fuente-1); padding: 20px 0; position: relative; }
+    footer p { text-align: center; font-size: 18px; margin-top: 1rem; color: var(--color-txt-firma); }
+
+    /* Reproductor de música */
+    /* El reproductor de YouTube queda en pantalla pero invisible (algunos navegadores no reproducen si está fuera de pantalla) */
+    #player-musica-fondo {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #controlador-musica { position: fixed; z-index: 999; top: 10px; right: 0; }
+    .music-anim-icon {
+      position: relative;
+      width: 56px; height: 56px; margin: 15px; cursor: pointer;
+      border-radius: 50%; background: var(--color-circulos-anim-reproductor);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(75, 62, 122, 0.35);
+    }
+    .music-anim-icon[data-estado-music="play"] { animation: pulseMusic 1.4s infinite ease-in-out; }
+    @keyframes pulseMusic {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(75, 62, 122, 0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(75, 62, 122, 0); }
+    }
+    .music-anim-icon svg { width: 24px; height: 24px; }
+    .music-anim-icon svg path { fill: var(--color-nota-anim-reproductor); }
+
+    /* Raya diagonal cuando la música está en pausa */
+    .music-anim-icon[data-estado-music="pause"]::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 36px;
+      background: var(--color-nota-anim-reproductor);
+      border-radius: 2px;
+      transform: rotate(45deg);
+    }
+
+    /* Modales */
+    .modal-backdrop { background-color: var(--color-backdrop-modal); opacity: 1 !important; }
+    .modal .modal-content { text-align: center; border-radius: 20px; border: 1px solid var(--color-bordes-marcos); }
+    .modal .modal-content-2.box-color-col { background-color: var(--color-fondo-col-modal); border-radius: 20px; padding: 30px 20px; }
+    .modal .modal-content-2 p { color: var(--color-textos-modales); font-family: var(--fuente-2); font-weight: var(--grosor-fuente-light); font-size: 17px; }
+    .modal .modal-content-2 .img-top-modal { position: relative; }
+    .modal .modal-content-2 .img-top-modal svg { width: 90px; margin: 20px 0 5px; }
+    .modal .modal-icon path, .modal .modal-icon line, .modal .modal-icon polyline { stroke: var(--color-iconos-modales); stroke-width: 2px; }
+    .modal .modal-content-2 .close { position: absolute; top: 5px; right: 5px; color: var(--color-x-cierre-modales); width: 40px; height: 40px; opacity: 1; font-size: 34px; font-family: var(--fuente-1); text-shadow: none; outline: none; }
+    .modal .modal-content-2 .modal-header, .modal .modal-content-2 .modal-footer { border: none; display: inline-block; padding: 0; }
+    .modal .modal-content-2 .modal-header .modal-title { font-size: 30px; font-family: var(--fuente-1); color: var(--color-titulo-modal); }
+    .modal .modal-content-2 .boton { margin-bottom: 25px; }
+
+    /* Sugerir canción & Mapa */
+    #modalSugerirCancion input { border: none; border-bottom: 1px solid var(--color-bordes-inputs-forms); text-align: center; color: var(--color-inputs-form); font-family: var(--fuente-2); }
+    #googleMapIframe { height: 450px; width: 100%; border: 0; }
+    .map-loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .map-loader.hidden { opacity: 0; pointer-events: none; }
+    .map-spinner { width: 40px; height: 40px; border: 3px solid rgba(198,215,207,0.3); border-top-color: var(--color-pallete-2); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Responsive Mobile */
+    @media only screen and (max-width: 767px) {
+      .bordes-adornos { padding: 140px 0 150px !important; }
+      .portada-container.bordes-adornos:before { top: -80px; }
+      .bordes-adornos:after { bottom: -80px; }
+      section.portada .content-portada .nombres span { font-size: 70px; line-height: 70px; }
+      section.portada p.subtitulo { font-size: 30px; }
+      section.portada .box-frase-portada p { font-size: 20px; width: 95%; }
+      section.cuenta-regresiva .reloj-col { width: 85px; }
+      section.cuenta-regresiva .reloj-col span.number { font-size: 45px; }
+      section.ceremonia-fiesta .box-color-col { width: 95%; }
+      section.galeria .content-fotos .polaroid { padding-bottom: 15px; }
+      section.instagram .hashtag { font-size: 35px; }
+      section.footer .col-acciones-footer ul { margin-top: 40px; }
+      section.footer .col-acciones-footer ul li { text-align: center; }
+      #controlador-musica { top: initial; bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="preloader-area">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="loader">
+        <svg viewBox="0 0 38 32"><path d="M19 30.5C18.6 30.5 18.2 30.4 17.9 30.2C17.1 29.9 0.3 22.9 0.3 10.6C0.3 4.1 5.6 -1.1 12.2 -1.1C14.7 -1.1 17 -0.4 19 1C21 -0.4 23.3 -1.1 25.8 -1.1C32.4 -1.1 37.7 4.1 37.7 10.6C37.7 22.9 20.9 29.9 20.1 30.2C19.8 30.4 19.4 30.5 19 30.5Z" transform="translate(0,1.2)"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="inv-container container">
+
+    <!-- Portada -->
+    <section class="portada portada-completa portada-picture">
+      <div class="opacidad-portada"></div>
+      <div class="portada-container d-flex justify-content-center align-items-center bordes-adornos">
+        <div class="content-portada text-center">
+          <span class="fecha">19.12.2026</span>
+          <div class="box-nombres-fecha-portada">
+            <div class="nombres"><span>Amelia</span></div>
+            <p class="subtitulo">Mis XV años</p>
+          </div>
+          <div class="box-frase-portada">
+            <p>Te espero para compartir la alegría de esa noche que será para mí mágica, inolvidable y única.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuenta Regresiva -->
+    <section class="cuenta-regresiva section-border bordes-adornos">
+      <div class="sombra-horizontal sombra-top"></div>
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="box-cta-regresiva text-center">
+            <span class="falta">Falta</span>
+            <div id="reloj" class="reloj">
+              <div id="dias" class="reloj-col"><span class="number">00</span><span class="time">días</span></div>
+              <div id="horas" class="reloj-col"><span class="number">00</span><span class="time">hs</span></div>
+              <div id="minutos" class="reloj-col"><span class="number">00</span><span class="time">min</span></div>
+              <div id="segundos" class="reloj-col no-border"><span class="number">00</span><span class="time">seg</span></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="corazon-falta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 32">
+                  <g transform="translate(19,16.1)">
+                    <path d="M-1.137,15.594 C-0.772,15.742 -0.386,15.816 0.001,15.816 C0.387,15.816 0.773,15.742 1.137,15.594 C1.855,15.301 18.725,8.284 18.725,-4.074 C18.725,-10.55 13.385,-15.816 6.82,-15.816 C4.35,-15.816 1.979,-15.067 0.001,-13.702 C-1.978,-15.067 -4.349,-15.816 -6.818,-15.816 C-13.384,-15.816 -18.725,-10.55 -18.725,-4.074 C-18.725,8.284 -1.855,15.301 -1.137,15.594z"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sombra-horizontal sombra-bottom"></div>
+    </section>
+
+    <!-- Celebración -->
+    <section class="ceremonia-fiesta section-border bordes-adornos">
+      <div class="sombra-horizontal sombra-top"></div>
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6 col-fiesta d-flex justify-content-center text-center">
+            <div class="box-color-col">
+              <div class="anim-fiesta">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+                  <g fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+                    <circle cx="44" cy="25" r="5"/>
+                    <path d="M52,78 C52,78 71,72 86,80" />
+                    <path d="M55,69 L89,53" />
+                    <path d="M49,63 L62,52" />
+                    <path d="M43,31 C43,31 48,45 39,65" />
+                    <path d="M38,65 C22,63 14,72 20,83 C26,94 46,108 65,109 C80,110 85,103 77,92"/>
+                    <path d="M18,75 C21,95 45,106 60,108" />
+                    <path d="M16,90 L70,75" />
+                  </g>
+                </svg>
+              </div>
+              <h3>Celebración</h3>
+              <div class="info-col">
+                <div class="info-box">
+                  <h6>Día</h6>
+                  <p>Sábado 19 de Diciembre - 19:00 hs</p>
+                  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Amelia+%3A%3A%3A+Mis+15+a%C3%B1os+%3A%3A%3A+(Fiesta)&dates=20261219T190000/20261220T010000&ctz=America/Guayaquil&location=Avenida+Am%C3%A9rica+y+calle+25+de+junio" target="_blank" class="boton">Agendar</a>
+                </div>
+                <div class="info-box">
+                  <h6>Lugar</h6>
+                  <p>Casa de mi Tía Alexandra</p>
+                  <a href="#" class="boton confirmar-asistencia">Confirmar asistencia</a>
+                </div>
+                <div class="info-box">
+                  <h6>Dirección</h6>
+                  <p>Avenida América y calle 25 de junio</p>
+                  <a href="#" class="boton modal-como-llegar">¿Cómo llegar?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sombra-horizontal sombra-bottom"></div>
+    </section>
+
+    <!-- Confirmación con botón único -->
+    <section class="seccion-principal confirmacion-asistencia bordes-adornos">
+      <div class="box-confirmacion">
+        <h2 class="title">Confirmación de asistencia</h2>
+        <p class="subtitle">Es importante que confirmes tu asistencia</p>
+        <a href="#" class="boton boton-confirmacion confirmar-asistencia">Confirmar asistencia</a>
+      </div>
+    </section>
+
+    <!-- Galería (rutas locales) -->
+    <section class="galeria bordes-adornos">
+      <div class="container">
+        <div class="row text-center d-flex justify-content-center align-items-center">
+          <div class="content-galeria">
+            <h2 class="title">Un recorrido de estos 15 años</h2>
+            <p class="subtitle">Junto a personas que son muy importantes en mi vida</p>
+            <div class="anim-galeria">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 121">
+                <g fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+                  <rect x="58" y="26" width="22" height="22" rx="3"/>
+                  <rect x="4" y="62" width="85" height="55" rx="7"/>
+                  <circle cx="46" cy="89" r="17"/>
+                  <line x1="34" y1="13" x2="42" y2="20"/>
+                  <line x1="30" y1="29" x2="40" y2="29"/>
+                  <line x1="34" y1="45" x2="42" y2="39"/>
+                  <line x1="103" y1="13" x2="95" y2="20"/>
+                  <line x1="107" y1="29" x2="98" y2="29"/>
+                  <line x1="103" y1="45" x2="95" y2="39"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-fotos">
+        <div class="carrusel">
+          <div>
+            <div class="polaroid">
+              <a href="img/01.jpg" data-fancybox="galeria">
+                <img src="img/01.jpg" alt="Foto 1" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="polaroid">
+              <a href="img/02.jpg" data-fancybox="galeria">
+                <img src="img/02.jpg" alt="Foto 2" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="polaroid">
+              <a href="img/03.jpg" data-fancybox="galeria">
+                <img src="img/03.jpg" alt="Foto 3" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fiesta -->
+    <section class="fiesta section-border bordes-adornos">
+      <div class="sombra-horizontal sombra-top"></div>
+      <div class="container">
+        <div class="row text-center d-flex justify-content-center align-items-center">
+          <div class="col-md-12">
+            <h2 class="title">Fiesta</h2>
+            <p class="subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+          </div>
+
+          <!-- Música -->
+          <div class="col-md-4 item-fiesta">
+            <div class="w-100 content-item-fiesta">
+              <div class="box-color-col d-flex flex-column justify-content-between align-items-center">
+                <h3>Música</h3>
+                <div class="d-flex justify-content-center align-items-center content-anim-fiesta">
+                  <div class="anim-musica">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 121">
+                      <g fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+                        <path d="M58,50 L53,15 C52.8,13 51,11.8 49,12.2 L14,20.8 C12.5,21.2 11.5,22.6 11.8,24.2 L16.8,55.2 C10,56.5 3.5,63 6,71 C8.5,77 16,78 22,74 C27,70 28,63 26,57 L22,30 L50,23 L54,50"/>
+                        <path d="M98,55 L68,52 L63,83 C56,82 49,87 50,94 C51,100 59,103 66,100 C71,98 74,93 75,88 L79,63 L97,65 L94,85 C87,84 81,89 82,95 C83,101 90,104 97,101 C102,99 104,94 105,89 L109,59 C109,57 107,55 98,55 Z"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <p>¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
+                <a href="#" class="boton sugerir-cancion">Sugerir canción</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dress Code -->
+          <div class="col-md-4 item-fiesta">
+            <div class="w-100 content-item-fiesta">
+              <div class="box-color-col d-flex flex-column justify-content-between align-items-center">
+                <h3>Dress Code</h3>
+                <div class="d-flex justify-content-center align-items-center content-anim-fiesta">
+                  <div class="anim-vestuario">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 76">
+                      <g fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+                        <path d="M64,53 L86,53 C86,53 105,71 127,73 C127,73 144,76 146,63 C146,63 152,36 145,11 C145,11 142,-3 125,3 C125,3 97,10 86,22 L63,22 C63,22 48,4 21,2 C21,2 9,0 5,13 C5,13 -2,43 4,61 C4,61 10,77 21,73 C21,73 50,69 63,53"/>
+                        <path d="M63,22 C63,22 58,34 63,53"/>
+                        <path d="M86,22 C86,22 92,36 86,53"/>
+                        <path d="M89,30 C89,30 100,25 112,24"/>
+                        <path d="M89,45 C89,45 104,51 114,51"/>
+                        <path d="M61,30 C61,30 50,25 38,24"/>
+                        <path d="M61,45 C61,45 46,51 36,51"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <p>Una orientación para <br /> tu vestuario</p>
+                <a href="#" class="boton modal-vestuario">Ver más</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tips y Notas -->
+          <div class="col-md-4 item-fiesta">
+            <div class="w-100 content-item-fiesta">
+              <div class="box-color-col d-flex flex-column justify-content-between align-items-center">
+                <h3>Tips y Notas</h3>
+                <div class="d-flex justify-content-center align-items-center content-anim-fiesta">
+                  <div class="anim-tips">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 105">
+                      <g fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+                        <path d="M67,9 L47,9 C46,4.8 42.5,1.5 38,1.5 C33.5,1.5 30,4.8 29,9 L9.7,9 C5.2,9 1.6,12.7 1.6,17.2 L1.6,94.5 C1.6,99 5.2,102.7 9.7,102.7 L67,102.7 C71.5,102.7 75,99 75,94.5 L75,17.2 C75,12.7 71.5,9 67,9 Z"/>
+                        <path d="M55,9.6 L55,12.4 C55,18 50.5,22.5 45,22.5 L31,22.5 C25.3,22.5 21,18 21,12.4 L21,9.4"/>
+                        <polyline points="22.4,57.4 32.8,67.5 53,48"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <p>Información adicional <br /> para tener en cuenta</p>
+                <a href="#" class="boton modal-tips">+ Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sombra-horizontal sombra-bottom"></div>
+    </section>
+
+    <!-- Regalos -->
+    <section class="regalos bordes-adornos">
+      <div class="container">
+        <div class="row text-center d-flex justify-content-center align-items-center">
+          <div class="content-regalos">
+            <h2 class="title">Regalos</h2>
+            <p class="subtitle">Si deseas regalarme algo más que tu hermosa presencia...</p>
+            <div class="w-100">
+              <div class="anim-regalos">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 114">
+                  <g fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3">
+                    <path d="M75,62 L75,102 C75,106 72,110 68,110 L29,110 C25,110 21,106 21,102 L21,62 Z"/>
+                    <rect x="11" y="45" width="73" height="17" rx="5"/>
+                    <line x1="41" y1="45" x2="41" y2="110"/>
+                    <line x1="55" y1="45" x2="55" y2="110"/>
+                    <path d="M47,42 C45,36 40,24 27,24 C22,24 19,26 19,29 C19,35 29,43 47,44 C66,43 76,35 76,29 C76,26 73,24 68,24 C55,24 50,36 48,42"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <br />
+            <a href="#" class="boton modal-regalos">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="instagram section-border bordes-adornos">
+      <div class="sombra-horizontal sombra-top"></div>
+      <div class="container">
+        <div class="row text-center d-flex justify-content-center align-items-center">
+          <h2 class="title">Una gran fiesta junto a vos</h2>
+          <p class="subtitle">Compartí tus fotos y videos de ese hermoso día</p>
+          <div class="w-100">
+            <div class="anim-instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 136">
+                <g transform="translate(0,10)">
+                  <rect x="3" y="42" width="80" height="80" rx="21" fill="none" stroke-width="3"/>
+                  <circle cx="43" cy="82" r="20" fill="none" stroke-width="3"/>
+                  <circle cx="66.5" cy="58" r="4.5" fill="none" stroke-width="3"/>
+                  <path d="M36,7 H10 C8,7 6.5,8.7 6.5,10.7 V26.7 C6.5,28.7 8,30.4 10,30.4 H17.6 L21.3,34 C22.3,35 23.8,35 24.8,34 L28.5,30.4 H36 C38,30.4 39.5,28.7 39.5,26.7 V10.7 C39.5,8.7 38,7 36,7 Z M28.3,20 L23.7,24.6 C23.3,25 22.8,25 22.4,24.6 L17.8,20 C16.5,18.7 16.5,16.5 17.8,15.2 C19.1,13.9 21.3,13.9 22.7,15.2 L23,15.5 L23.3,15.2 C24.6,13.9 26.8,13.9 28.2,15.2 C29.5,16.5 29.5,18.7 28.3,20 Z"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="w-100">
+            <a target="_blank" class="hashtag" href="https://www.instagram.com/explore/tags/15Amelia">#15Amelia</a>
+          </div>
+          <a target="_blank" href="https://www.instagram.com/explore/tags/15Amelia" class="boton">Ver en Instagram</a>
+        </div>
+      </div>
+      <div class="sombra-horizontal sombra-bottom"></div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer bordes-adornos">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-nombres-footer">
+              <div class="nombres"><span>Amelia</span></div>
+              <p class="subtitulo">Mis XV años</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-acciones-footer d-flex justify-content-center align-items-center">
+            <ul>
+              <li><a href="#" class="confirmar-asistencia">Confirmar asistencia</a></li>
+              <li><a href="#" class="sugerir-cancion">Sugerir canción</a></li>
+              <li>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Amelia+%3A%3A%3A+Mis+15+a%C3%B1os+%3A%3A%3A+(Fiesta)&dates=20261219T190000/20261220T010000&ctz=America/Guayaquil" target="_blank">
+                  Agendar Fiesta
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Firma -->
+    <footer class="footer-firma bordes-adornos">
+      <div class="sombra-horizontal sombra-top"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Hecho con <span class="heart">&#10084;</span> para los XV años de Amelia</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Controlador música -->
+    <div id="controlador-musica">
+      <div id="play-pause-music" data-estado-music="pause" class="music-anim-icon" title="Reproducir / Pausar música">
+        <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+      </div>
+    </div>
+    <div id="player-musica-fondo"></div>
+
+    <!-- MODAL: Confirmar Asistencia -->
+    <div id="modalAsistencia" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-content-2 box-color-col">
+            <div class="img-top-modal d-flex justify-content-center align-items-start">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.2 117.1" class="modal-icon">
+                <g fill="none" stroke-linecap="round" stroke-miterlimit="10">
+                  <path d="M86.8,16v3.5c0,5.6-4.5,10.1-10.1,10.1H62.7c-5.6,0-10.1-4.5-10.1-10.1V16"/>
+                  <path d="M98.7,16.1H79.1c-0.8-4.3-4.5-7.5-9-7.5c-4.5,0-8.2,3.2-9,7.5H41.5c-4.5,0-8.1,3.6-8.1,8.1v77.3c0,4.5,3.6,8.1,8.1,8.1h57.2c4.5,0,8.1-3.6,8.1-8.1V24.3C106.9,19.8,103.2,16.1,98.7,16.1z"/>
+                  <polyline points="54.2,64.4 64.6,74.6 85,54.9"/>
+                </g>
+              </svg>
+            </div>
+            <div class="modal-header"><h5 class="modal-title">Confirmar Asistencia</h5></div>
+            <div class="modal-body">
+              <p>Tu confirmación es muy importante para nosotros.</p>
+              <p>Por favor, comunícate con la familia para confirmar tu asistencia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Sugerir Canción -->
+    <div id="modalSugerirCancion" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-content-2 box-color-col">
+            <div class="img-top-modal d-flex justify-content-center align-items-start">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.2 117.1" class="modal-icon">
+                <g fill="none" stroke-miterlimit="10">
+                  <path d="M118.1,64.6c-0.5-0.7-1.3-1.1-2.1-1.1l-36.4-3.1c-1.5-0.1-2.9,1-3.2,2.5l-5.2,31c-1.1,0-2.3,0.1-3.4,0.4c-6.3,1.6-10.4,7-9.2,12.1c1.2,5.1,7.3,8,13.6,6.4c4.5-1.1,7.6-4.1,8.3-7.6l4.8-28.3l24,2.1l-3.1,18.1c-1.1,0-2.2,0.1-3.3,0.4c-5.3,1.3-8.7,5.8-7.6,10c1.1,4.2,6.2,6.5,11.5,5.2c4.3-1.1,7.8-4,9-7.6l6.6-38.2C118.8,66.1,118.6,65.3,118.1,64.6z"/>
+                  <path d="M74.4,45.8l-5.6-35.2c-0.3-1.7-1.9-2.8-3.7-2.4l-35.5,8.7c-1.5,0.4-2.5,1.8-2.2,3.4l4.9,31.1c-1.1,0.2-2.2,0.6-3.2,1.1c-5.5,3.5-7.6,10-4.8,14.4c2.8,4.4,9.6,5.1,15.1,1.6c3.8-2.4,5.9-6.1,6-9.8l-4.9-30.7l22.6-5.5l2.8,17.5c-1.1,0.2-2.1,0.5-3.1,1c-5.1,3.3-7.3,9.1-5.3,13.5c2.1,4.5,8.3,5.8,13.4,2.5c3.5-2.2,5.6-5.7,5.8-9.2L74.4,45.8z"/>
+                </g>
+              </svg>
+            </div>
+            <div class="modal-header"><h5 class="modal-title">Sugerir Canción</h5></div>
+            <div class="modal-body">
+              <div class="formulario-content">
+                <form id="formSugerirCancion">
+                  <div class="form-group"><input type="text" class="form-control" id="nombreSugerencia" placeholder="Tu nombre" /></div>
+                  <div class="form-group"><input type="text" class="form-control" id="descripcionSugerencia" placeholder="Nombre de canción y autor" /></div>
+                  <div class="form-group"><input type="text" class="form-control" id="linkSugerencia" placeholder="Si lo desea ingrese el link de YouTube, Spotify, etc." /></div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="sendSugerenciaCancion" class="boton">Sugerir canción</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Dress Code -->
+    <div id="modalVestuario" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-content-2 box-color-col">
+            <div class="img-top-modal d-flex justify-content-center align-items-start">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.2 117.1" class="modal-icon">
+                <g fill="none" stroke-linecap="round" stroke-miterlimit="10">
+                  <path d="M59.4,48.4c0,0-13.6-16.6-38.3-17.8c0,0-10.8-1.9-14.4,9.6c0,0-6,27.3-0.5,43.4c0,0,5.3,14.6,15.4,11c0,0,25.6-3.4,37.6-18h21.1c0,0,17.2,16,36.9,17.7c0,0,15.1,2.7,16.8-8.4c0,0,5.7-24.4-0.5-47.2c0,0-2.2-12.9-17.7-7.2c0,0-25.2,6.3-35.2,17.3L59.4,48.4z"/>
+                  <path d="M57.5,55.9c0,0-9.6-4.8-20.4-5.7"/><path d="M58.3,69c0,0-13.7,6-22.6,5.5"/>
+                  <path d="M82.9,55.9c0,0,9.6-4.8,20.4-5.7"/><path d="M82,69c0,0,13.7,6,22.6,5.5"/>
+                  <path d="M59.4,48.4c0,0-4.1,10.6-0.2,28.1"/><path d="M80.6,48.7c0,0,5.3,12.2-0.3,27.8"/>
+                </g>
+              </svg>
+            </div>
+            <div class="modal-header"><h5 class="modal-title">Dress Code</h5></div>
+            <div class="modal-body"><p>Nos encantará verte lucir increíble esta noche</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Tips -->
+    <div id="modalTips" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-content-2 box-color-col">
+            <div class="img-top-modal d-flex justify-content-center align-items-start">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.2 117.1" class="modal-icon">
+                <g fill="none" stroke-linecap="round" stroke-miterlimit="10">
+                  <path d="M86.8,16v3.5c0,5.6-4.5,10.1-10.1,10.1H62.7c-5.6,0-10.1-4.5-10.1-10.1V16"/>
+                  <path d="M98.7,16.1H79.1c-0.8-4.3-4.5-7.5-9-7.5c-4.5,0-8.2,3.2-9,7.5H41.5c-4.5,0-8.1,3.6-8.1,8.1v77.3c0,4.5,3.6,8.1,8.1,8.1h57.2c4.5,0,8.1-3.6,8.1-8.1V24.3C106.9,19.8,103.2,16.1,98.7,16.1z"/>
+                  <polyline points="54.2,64.4 64.6,74.6 85,54.9"/>
+                </g>
+              </svg>
+            </div>
+            <div class="modal-header"><h5 class="modal-title">Tips y Notas</h5></div>
+            <div class="modal-body"><p>Confirmación: Por favor confirma tu asistencia.<br />¡A celebrar!: Trae toda tu energía para bailar y disfrutar toda la noche.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Regalos -->
+    <div id="modalRegalos" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-content-2 box-color-col">
+            <div class="img-top-modal d-flex justify-content-center align-items-start">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.2 117.1" class="modal-icon">
+                <g fill="none" stroke-miterlimit="10">
+                  <path d="M96.3,54.3V94c0,4.3-3.4,7.7-7.7,7.7H49.4c-4.3,0-7.7-3.4-7.7-7.7V54.3H96.3z"/>
+                  <line x1="61.8" y1="101.7" x2="61.8" y2="36.6"/>
+                  <line x1="75.1" y1="36.6" x2="75.1" y2="101.7"/>
+                  <path d="M98.4,54.3H37.8c-3.2,0-5.8-2.6-5.8-5.8v-6.4c0-3.2,2.6-5.8,5.8-5.8h60.6c3.2,0,5.8,2.6,5.8,5.8v6.4C104.3,51.7,101.6,54.3,98.4,54.3z"/>
+                  <path d="M47.8,15.4c-5.3,0-8.6,2.1-8.6,5.5c0,6.1,10,14.5,28.8,15.1C66.7,30.4,62.1,15.4,47.8,15.4z"/>
+                  <path d="M68.5,35.9c18.8-0.6,28.8-9,28.8-15.1c0-3.4-3.3-5.5-8.6-5.5C74.4,15.4,69.8,30.4,68.5,35.9z"/>
+                </g>
+              </svg>
+            </div>
+            <div class="modal-header"><h5 class="modal-title">Regalos</h5></div>
+            <div class="modal-body"><p>Tu presencia es mi mejor regalo, pero si deseas tener un detalle conmigo, agradeceré que sea en sobre cerrado. En la recepción contaremos con un buzón especial para depositarlos.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Mapa -->
+    <div id="modalMapa" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-content-2 box-color-col">
+            <div class="img-top-modal d-flex justify-content-center align-items-start">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="modal-icon">
+                <g fill="none" stroke-miterlimit="10">
+                  <path d="M60,3.3C39.7,3.3,23.3,19.7,23.3,40c0,31.6,25,55.5,33.7,62.8c1.7,1.4,4.2,1.4,5.9,0c8.7-7.4,33.7-31.3,33.7-62.8C96.7,19.7,80.3,3.3,60,3.3z M60,63.5c-13,0-23.5-10.5-23.5-23.5S47,16.5,60,16.5C73,16.5,83.5,27,83.5,40S73,63.5,60,63.5z"/>
+                  <path d="M73.2,93.2c13.7,1.7,23.4,6.2,23.4,11.4c0,6.7-16.1,12.2-35.9,12.2s-35.9-5.5-35.9-12.2c0-5,9.1-9.4,22-11.2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="modal-header"><h5 class="modal-title">¿Cómo llegar a la Fiesta?</h5></div>
+            <div class="modal-body">
+              <div id="mapLoader" class="map-loader"><div class="map-spinner"></div></div>
+              <iframe id="googleMapIframe" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="modal-footer">
+              <a class="boton ampliar-mapa" target="_blank" href="https://www.google.com/maps/place/25+de+Junio+%26+America,+Portoviejo/data=!4m2!3m1!1s0x902bf2b76713e21d:0xd83feb33034afd41">Ampliar mapa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.inv-container -->
+
+  <!-- Scripts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    const fechaCuentaRegresiva = "12/19/2026 19:00:00";
+    const latitudFiesta = -1.0590193;
+    const longitudFiesta = -80.4657789;
+
+    // Preloader
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".loader").fadeOut(400);
+        $(".preloader-area").delay(100).fadeOut(400);
+        AOS.init();
+      }, 300);
+    });
+
+    // YouTube Música de fondo
+    var player;
+    var playerListo = false;
+
+    function setEstadoMusica(estado) {
+      $("#play-pause-music").attr("data-estado-music", estado);
+    }
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player("player-musica-fondo", {
+        height: "1",
+        width: "1",
+        videoId: "KaM1bCuG4xo",
+        playerVars: {
+          playlist: "KaM1bCuG4xo", // necesario para que loop funcione
+          loop: 1,
+          controls: 0,
+          playsinline: 1,
+          rel: 0
+        },
+        events: {
+          onReady: function (e) {
+            playerListo = true;
+            e.target.setVolume(80);
+          },
+          onStateChange: function (e) {
+            if (e.data === YT.PlayerState.PLAYING) setEstadoMusica("play");
+            if (e.data === YT.PlayerState.PAUSED) setEstadoMusica("pause");
+          },
+          onError: function () {
+            console.warn("YouTube no pudo reproducir este video (¿embed deshabilitado?)");
+          }
+        }
+      });
+    }
+
+    $("body").on("click", "#play-pause-music", function (e) {
+      e.preventDefault();
+      if (!playerListo) return;
+
+      if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+        player.pauseVideo();
+      } else {
+        player.playVideo();
+      }
+    });
+
+    // Posición botón música
+    function calcularPosicionReproductor() {
+      const anchoContainer = parseInt($(".inv-container").css("width"));
+      const anchoVentana = $(window).width();
+      const sobrante = Math.max(0, (anchoVentana - anchoContainer) / 2);
+      $("#controlador-musica").css("right", sobrante + 1);
+    }
+    $(window).on("resize", calcularPosicionReproductor);
+    $(document).ready(calcularPosicionReproductor);
+
+    // Cuenta regresiva
+    const countDownDate = new Date(fechaCuentaRegresiva).getTime();
+    const timer = setInterval(function () {
+      const distance = countDownDate - Date.now();
+      if (distance < 0) {
+        clearInterval(timer);
+        $("#reloj").html('<p class="fin-cuenta">¡Llegó el gran día!</p>');
+        $(".falta").text("");
+        return;
+      }
+      $("#dias .number").text(Math.floor(distance / (1000 * 60 * 60 * 24)));
+      $("#horas .number").text(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+      $("#minutos .number").text(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+      $("#segundos .number").text(Math.floor((distance % (1000 * 60)) / 1000));
+    }, 1000);
+
+    // Carrusel Slick
+    $(".carrusel").slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      centerMode: true,
+      dots: true,
+      centerPadding: "20px",
+      slidesToShow: 3,
+      prevArrow: false,
+      nextArrow: false,
+      responsive: [
+        { breakpoint: 768, settings: { centerPadding: "40px", slidesToShow: 3 } },
+        { breakpoint: 480, settings: { centerPadding: "40px", slidesToShow: 1 } }
+      ]
+    });
+
+    // Modales
+    $("body").on("click", "a.confirmar-asistencia", e => { e.preventDefault(); $("#modalAsistencia").modal({ backdrop: "static" }); });
+    $("body").on("click", "a.sugerir-cancion", e => { e.preventDefault(); $("#modalSugerirCancion").modal({ backdrop: "static" }); });
+    $("body").on("click", "a.modal-vestuario", e => { e.preventDefault(); $("#modalVestuario").modal({ backdrop: "static" }); });
+    $("body").on("click", "a.modal-tips", e => { e.preventDefault(); $("#modalTips").modal({ backdrop: "static" }); });
+    $("body").on("click", "a.modal-regalos", e => { e.preventDefault(); $("#modalRegalos").modal({ backdrop: "static" }); });
+
+    $("body").on("click", "a.modal-como-llegar", function (e) {
+      e.preventDefault();
+      const src = `https://www.google.com/maps?q=${latitudFiesta},${longitudFiesta}&output=embed`;
+      $("#mapLoader").removeClass("hidden");
+      $("#googleMapIframe").css("opacity", "0").attr("src", src).off("load").on("load", function () {
+        $("#mapLoader").addClass("hidden");
+        $(this).css("opacity", "1");
+      });
+      $("#modalMapa").modal({ backdrop: "static" });
+    });
+
+    // Sugerir canción
+    $("#sendSugerenciaCancion").on("click", function () {
+      if (!$("#nombreSugerencia").val().trim() || !$("#descripcionSugerencia").val().trim()) {
+        return alert("Por favor completa tu nombre y la canción.");
+      }
+      $("#formSugerirCancion")[0].reset();
+      $("#modalSugerirCancion").modal("hide");
+      alert("¡Gracias! Tu sugerencia de canción fue guardada.");
+    });
+  </script>
+</body>
+</html>
